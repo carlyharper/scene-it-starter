@@ -17,6 +17,9 @@ $(document).ready(function () {
         return finalHTML;
     }
 
+    //var testHTML = renderMovies(movieData);
+    //$('.movies-cont').html(testHTML);
+
     //Set up click listener
     $('.movies-cont').on('click', '.button', function(){
         var imdbID = $(this).data('id');
@@ -34,10 +37,6 @@ $(document).ready(function () {
         watchlistJSON = JSON.stringify(watchlist);
         localStorage.setItem('watchlist', watchlistJSON);
     });
-    
-
-    //var testHTML = renderMovies(movieData);
-    //$('.movies-cont').html(testHTML);
     
     $('form').on('submit', function(e){
      e.preventDefault();
